@@ -6,8 +6,6 @@ import {
 import { AuthContext } from '../context/AuthContext';
 import { useNavigate, Link as RouterLink } from 'react-router-dom';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
-import Visibility from '@mui/icons-material/Visibility';
-import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import Avatar from '@mui/material/Avatar';
 
 const Login = () => {

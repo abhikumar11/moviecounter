@@ -6,7 +6,7 @@ export const MovieContext = createContext();
 export const MovieProvider = ({ children }) => {
     const [movies, setMovies] = useState([]);
     const [totalPages, setTotalPages] = useState(1);
-    const API_URL = "http://localhost:3001/api/movies";
+    const API_URL = "https://moviecounter.onrender.com/api/movies";
 
     const getHeaders = () => ({
         headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }

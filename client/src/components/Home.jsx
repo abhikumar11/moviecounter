@@ -102,7 +102,7 @@ const Home = () => {
                   {}
                   <CardMedia
                     component="img"
-                    image={movie.imageUrl || 'https://via.placeholder.com/300x450?text=No+Poster'}
+                    image={movie.imageUrl ||""}
                     alt={movie.title}
                     sx={{ 
                       width: '100%',

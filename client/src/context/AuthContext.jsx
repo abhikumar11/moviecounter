@@ -7,7 +7,7 @@ export const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
 
-    const API_BASE_URL = "http://localhost:3001/api/users";
+    const API_BASE_URL = "https://moviecounter.onrender.com/api/users";
 
     useEffect(() => {
         const storedUser = localStorage.getItem('user');
