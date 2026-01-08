@@ -1,16 +1,65 @@
-# React + Vite
+This README is designed to help you or other developers set up and
+understand the architecture of your Movie Management System,
+specifically highlighting the **3-items-per-page** pagination logic and
+the **Admin/Client** dual-interface.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**🎬 MovieCounter - MERN Stack Project**
 
-Currently, two official plugins are available:
+A full-stack movie management application built with the **MERN** stack
+(MongoDB, Express, React, Node.js). The application features a curated
+client-side experience with strictly limited pagination and a robust
+Admin Dashboard for content management.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**🚀 Key Features**
 
-## React Compiler
+-   **Curated Pagination**: Displays exactly **3 movies per page** on
+    the Home screen to ensure a focused user experience.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+-   **Dynamic Sorting**: Sort movies by Rating, Release Date, Duration,
+    or Alphabetical order.
 
-## Expanding the ESLint configuration
+-   **Live Search**: Debounced search functionality to find movies by
+    title or description.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+-   **Admin Dashboard**: A secure interface for Admins to Create, Read,
+    Update, and Delete (CRUD) movie records.
+
+-   **Uniform UI**: Cards are designed with fixed aspect ratios
+    (\$2:3\$) and truncated text to maintain a perfect grid layout
+    regardless of content length.
+
+**🛠️ Tech Stack**
+
+**Frontend:**
+
+-   React.js (Context API for state management)
+
+-   Material UI (MUI) for responsive design
+
+-   Axios for API communication
+
+**Backend:**
+
+-   Node.js & Express
+
+-   MongoDB with Mongoose ODM
+
+-   JWT Authentication (Ready for integration)
+
+**🏗️ Architecture & Pagination Logic**
+
+The project uses a synchronized pagination logic between the Frontend
+and Backend.
+
+**How 3 Per Page Works:**
+
+1.  **Frontend**: The Home.jsx component passes a limit: 3 parameter to
+    the fetchMovies context function.
+
+2.  **API**: Axios sends a request to /api/movies/sorted?page=1&limit=3.
+
+3.  Backend: The controller calculates the offset using the formula:
+
+\$\$\\text{skip} = (\\text{page} - 1) \\times \\text{limit}\$\$
+
+4.  **Database**: Mongoose applies .skip(skip).limit(limit) to the query
