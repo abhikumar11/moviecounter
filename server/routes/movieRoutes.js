@@ -1,5 +1,5 @@
 const express = require('express');
-const { verifyToken, authorizeAdmin } = require('../middleware/AuthMiddleWare');
+const { verifyToken, authorizeAdmin } = require('../middleware/Auth');
 const router = express.Router();
 const movieController=require("../controllers/MovieController")
 
