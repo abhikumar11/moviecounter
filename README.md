@@ -2,6 +2,7 @@ This README is designed to help you or other developers set up and
 understand the architecture of your Movie Management System,
 specifically highlighting the **3-items-per-page** pagination logic and
 the **Admin/Client** dual-interface.
+**Deployed Link https://moviecounterfront.onrender.com/**
 
 **🎬 MovieCounter - MERN Stack Project**
 
