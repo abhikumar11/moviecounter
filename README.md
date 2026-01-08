@@ -5,6 +5,9 @@ the **Admin/Client** dual-interface.
 
 **Deployed Link https://moviecounterfront.onrender.com/**
 
+**Admin Credentials
+Email Id:admin@gmail.com, Password:123**
+
 **🎬 MovieCounter - MERN Stack Project**
 
 A full-stack movie management application built with the **MERN** stack
